@@ -5,7 +5,7 @@
 #include <cctype>
 #include <vector>
 #include <limits>
-
+#include <climits>
 using namespace std;
 
 // Function to print the Tic-Tac-Toe board
