@@ -1,0 +1,30 @@
+name: Build game.cpp
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-Tic_Tac_Toe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install g++
+        run: sudo apt-get install -y g++
+
+      - name: Build game.cpp
+        run: |
+          chmod +x build_game.sh
+          ./build_game.sh
+      - name: Upload game Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: game-artifact
+          path: game  
