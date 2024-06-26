@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cctype>
 #include <limits>
+#include <climits>
 
 using namespace std;
 
